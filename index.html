@@ -27,7 +27,7 @@
     </head>
     <body>
       <header class="hero">
-        <div class="container">
+        <div class="container" id ="home">
           <div class="row">
             <div class="col-md-6 col-md-offset-6 col-xs-12">
               <nav>
@@ -44,9 +44,9 @@
                 </div>
                 <ul class="main-nav">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#footer">Contact</a></li>
+                  <li><a href="#!" data-scroll = "#services">Services</a></li>
+                  <li><a href="#!" data-scroll = "#about">About</a></li>
+                  <li><a href="#!" data-scroll = "#contact">Contact</a></li>
                 </ul>
               </nav>
               <!-- <a href="#" class="menu"><img src="assets/menu.png"></a> -->
@@ -275,7 +275,7 @@
 
       <!-- Contact Banner -->
       <section class="contact-banner">
-        <div class="container">
+        <div class="container" id = "contact">
           <div class="row">
             <div class="col-md-12 text-center">
               <h1>Let’s talk about your product</h1>
@@ -295,11 +295,11 @@
                 <div class="footerlinks">
                     <!-- FOOTER LINKS START -->
                     <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
+                        <li><a href="#!" data-scroll = "#hero">Home</a></li>
+                        <li><a href="#!" data-scroll = "#about">About</a></li>
+                        <li><a href="#!" data-scroll = "#services">Services</a></li>
                         <!-- <li><a href="#portfolio">Portfolio</a></li> -->
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#!" data-scroll = "#testimonials">Testimonials</a></li>
     
                         <!--replace the email address below with your email address-->
                         <!-- <li><a href="mailto:you@yourmail.com">Contact</a></li> -->
@@ -317,7 +317,6 @@
       </footer>
 
       <!-- Some Javascript -->
-      <script src="js/jquery.nicescroll.min.js"></script>
       <script src="js/jquery-2.1.1.js"></script>
       <script src="js/swiper.jquery.min.js"></script>
       <!-- Initialize Client Swiper -->
@@ -405,6 +404,36 @@
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="./js/smartScroll.js"></script>
+    <script>
+        (function ($) {
+            "use strict";
+            // all parameters are optional
+            smartScroll.init({
+                speed: 700, // default 500
+                addActive: true, // default true
+                activeClass: "active", // default active
+                offset: 150 // default 100
+            }, function () {
+                console.log("callback");
+            });
+        })(jQuery);
+    </script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
     </script>
   </body>
 </html>
